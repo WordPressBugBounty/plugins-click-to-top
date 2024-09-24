@@ -1,0 +1,678 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Click to top\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-01 09:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.5.5\n"
+"X-Domain: click-to-top"
+
+#: admin/nt-class.php:146
+msgid ""
+"<strong><span style=\"color:red;\">Hi Buddy!! Recomended WordPress Theme for "
+"you:</span>  <span style=\"color:green\"> If you find a Secure, SEO friendly,"
+" full functional premium WordPress theme for your site then </span>  "
+"</strong>"
+msgstr ""
+
+#: admin/click_top_options.php:407
+msgid ""
+"<strong><span style=\"color:red;\">Hi Buddy!! 🔥 New Resume Kit Pro Theme:"
+"</span>  <span style=\"color:green\"> Now available with 20% early bard "
+"discount! </span> – Use coupon ( mg20off ) & Grab Your Exclusive Offers! "
+"</strong>"
+msgstr ""
+
+#. Description of the plugin
+msgid "A Click to top tool kit that helps your visitor go top smoothly."
+msgstr ""
+
+#: admin/click_top_options.php:210 admin/click_top_options.php:211
+msgid "Background back-pulse"
+msgstr ""
+
+#: admin/click_top_options.php:218
+msgid "Background bounce-to-bottom"
+msgstr ""
+
+#: admin/click_top_options.php:217
+msgid "Background bounce-to-left"
+msgstr ""
+
+#: admin/click_top_options.php:216
+msgid "Background bounce-to-right"
+msgstr ""
+
+#: admin/click_top_options.php:219
+msgid "Background bounce-to-top"
+msgstr ""
+
+#: admin/click_top_options.php:209
+msgid "Background fade"
+msgstr ""
+
+#: admin/click_top_options.php:221
+msgid "Background radial-in"
+msgstr ""
+
+#: admin/click_top_options.php:220
+msgid "Background radial-out"
+msgstr ""
+
+#: admin/click_top_options.php:222
+msgid "Background rectangle-in"
+msgstr ""
+
+#: admin/click_top_options.php:223
+msgid "Background rectangle-out"
+msgstr ""
+
+#: admin/click_top_options.php:224
+msgid "Background shutter-in-horizontal"
+msgstr ""
+
+#: admin/click_top_options.php:226
+msgid "Background shutter-in-vertical"
+msgstr ""
+
+#: admin/click_top_options.php:225
+msgid "Background shutter-out-horizontal"
+msgstr ""
+
+#: admin/click_top_options.php:227
+msgid "Background shutter-out-vertical"
+msgstr ""
+
+#: admin/click_top_options.php:214
+msgid "Background sweep-to-bottom"
+msgstr ""
+
+#: admin/click_top_options.php:213
+msgid "Background sweep-to-left"
+msgstr ""
+
+#: admin/click_top_options.php:212
+msgid "Background sweep-to-right"
+msgstr ""
+
+#: admin/click_top_options.php:215
+msgid "Background sweep-to-top"
+msgstr ""
+
+#: admin/click_top_options.php:51
+msgid "Basic Settings"
+msgstr ""
+
+#: admin/click_top_options.php:207
+msgid "Bob"
+msgstr ""
+
+#: admin/click_top_options.php:228
+msgid "Border fade"
+msgstr ""
+
+#: admin/click_top_options.php:229
+msgid "Border hollow"
+msgstr ""
+
+#: admin/click_top_options.php:234
+msgid "Border outline-in"
+msgstr ""
+
+#: admin/click_top_options.php:233
+msgid "Border outline-out"
+msgstr ""
+
+#: admin/click_top_options.php:243
+msgid "Border overline-from-center"
+msgstr ""
+
+#: admin/click_top_options.php:242
+msgid "Border overline-from-left"
+msgstr ""
+
+#: admin/click_top_options.php:244
+msgid "Border overline-from-right"
+msgstr ""
+
+#: admin/click_top_options.php:241
+msgid "Border overline-reveal"
+msgstr ""
+
+#: admin/click_top_options.php:239
+msgid "Border reveal"
+msgstr ""
+
+#: admin/click_top_options.php:232
+msgid "Border ripple-in"
+msgstr ""
+
+#: admin/click_top_options.php:231
+msgid "Border ripple-out"
+msgstr ""
+
+#: admin/click_top_options.php:235
+msgid "Border round-corners"
+msgstr ""
+
+#: admin/click_top_options.php:230
+msgid "Border trim"
+msgstr ""
+
+#: admin/click_top_options.php:237
+msgid "Border underline-from-center"
+msgstr ""
+
+#: admin/click_top_options.php:236
+msgid "Border underline-from-left"
+msgstr ""
+
+#: admin/click_top_options.php:238
+msgid "Border underline-from-right"
+msgstr ""
+
+#: admin/click_top_options.php:240
+msgid "Border underline-reveal"
+msgstr ""
+
+#: admin/click_top_options.php:169
+msgid "Bottom position"
+msgstr ""
+
+#: admin/click_top_options.php:204
+msgid "Bounce in"
+msgstr ""
+
+#: admin/click_top_options.php:205
+msgid "Bounce out"
+msgstr ""
+
+#: admin/click_top_options.php:251
+msgid "Box-shadow-inset"
+msgstr ""
+
+#: admin/click_top_options.php:250
+msgid "Box-shadow-outset"
+msgstr ""
+
+#: admin/click_top_options.php:253
+msgid "Bubble-float-top"
+msgstr ""
+
+#: admin/click_top_options.php:252
+msgid "Bubble-top"
+msgstr ""
+
+#: admin/click_top_options.php:208
+msgid "Buzz"
+msgstr ""
+
+#. Name of the plugin
+#: admin/click_top_options.php:38 admin/click_top_options.php:39
+#: admin/click_top_options.php:294 includes/click_top_options_set.php:167
+msgid "Click to top"
+msgstr ""
+
+#: admin/click_top_options.php:362
+msgid "Click to top settings"
+msgstr ""
+
+#: admin/click_top_options.php:74
+msgid "Distance from top/bottom before showing element (px)"
+msgstr ""
+
+#: admin/click_top_options.php:117
+msgid "easeInBack"
+msgstr ""
+
+#: admin/click_top_options.php:123
+msgid "easeInBounce"
+msgstr ""
+
+#: admin/click_top_options.php:114
+msgid "easeInCirc"
+msgstr ""
+
+#: admin/click_top_options.php:102
+msgid "easeInCubic"
+msgstr ""
+
+#: admin/click_top_options.php:120
+msgid "easeInElastic"
+msgstr ""
+
+#: admin/click_top_options.php:111
+msgid "easeInExpo"
+msgstr ""
+
+#: admin/click_top_options.php:119
+msgid "easeInOutBack"
+msgstr ""
+
+#: admin/click_top_options.php:125
+msgid "easeInOutBounce"
+msgstr ""
+
+#: admin/click_top_options.php:116
+msgid "easeInOutCirc"
+msgstr ""
+
+#: admin/click_top_options.php:104
+msgid "easeInOutCubic"
+msgstr ""
+
+#: admin/click_top_options.php:122
+msgid "easeInOutElastic"
+msgstr ""
+
+#: admin/click_top_options.php:113
+msgid "easeInOutExpo"
+msgstr ""
+
+#: admin/click_top_options.php:101
+msgid "easeInOutQuad"
+msgstr ""
+
+#: admin/click_top_options.php:107
+msgid "easeInOutQuart"
+msgstr ""
+
+#: admin/click_top_options.php:110
+msgid "easeInOutQuint"
+msgstr ""
+
+#: admin/click_top_options.php:98
+msgid "easeInOutSine"
+msgstr ""
+
+#: admin/click_top_options.php:99
+msgid "easeInQuad"
+msgstr ""
+
+#: admin/click_top_options.php:105
+msgid "easeInQuart"
+msgstr ""
+
+#: admin/click_top_options.php:108
+msgid "easeInQuint"
+msgstr ""
+
+#: admin/click_top_options.php:96
+msgid "easeInSine"
+msgstr ""
+
+#: admin/click_top_options.php:118
+msgid "easeOutBack"
+msgstr ""
+
+#: admin/click_top_options.php:124
+msgid "easeOutBounce"
+msgstr ""
+
+#: admin/click_top_options.php:115
+msgid "easeOutCirc"
+msgstr ""
+
+#: admin/click_top_options.php:103
+msgid "easeOutCubic"
+msgstr ""
+
+#: admin/click_top_options.php:121
+msgid "easeOutElastic"
+msgstr ""
+
+#: admin/click_top_options.php:112
+msgid "easeOutExpo"
+msgstr ""
+
+#: admin/click_top_options.php:100
+msgid "easeOutQuad"
+msgstr ""
+
+#: admin/click_top_options.php:106
+msgid "easeOutQuart"
+msgstr ""
+
+#: admin/click_top_options.php:109
+msgid "easeOutQuint"
+msgstr ""
+
+#: admin/click_top_options.php:97
+msgid "easeOutSine"
+msgstr ""
+
+#: admin/click_top_options.php:135
+msgid "Fade"
+msgstr ""
+
+#: admin/click_top_options.php:270
+msgid "First select button type icon then choice icon."
+msgstr ""
+
+#: admin/click_top_options.php:292
+msgid "First select button type text then type your text."
+msgstr ""
+
+#: admin/click_top_options.php:206
+msgid "Float"
+msgstr ""
+
+#: admin/click_top_options.php:247
+msgid "Float-shadow"
+msgstr ""
+
+#: admin/click_top_options.php:248
+msgid "Glow-shadow"
+msgstr ""
+
+#: admin/click_top_options.php:198
+msgid "Grow"
+msgstr ""
+
+#: admin/click_top_options.php:246
+msgid "Grow-shadow"
+msgstr ""
+
+#: admin/click_top_options.php:410
+msgid "Hide Me"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://wpthemespace.com"
+msgstr ""
+
+#: admin/click_top_options.php:263
+msgid "Icon"
+msgstr ""
+
+#: admin/click_top_options.php:275
+msgid "icon angle up"
+msgstr ""
+
+#: admin/click_top_options.php:274
+msgid "icon angle-double-up"
+msgstr ""
+
+#: admin/click_top_options.php:276
+msgid "icon arrow circle o up"
+msgstr ""
+
+#: admin/click_top_options.php:277
+msgid "icon arrow circle up"
+msgstr ""
+
+#: admin/click_top_options.php:278
+msgid "icon arrow-up"
+msgstr ""
+
+#: admin/click_top_options.php:279
+msgid "icon caret square o up"
+msgstr ""
+
+#: admin/click_top_options.php:280
+msgid "icon caret up"
+msgstr ""
+
+#: admin/click_top_options.php:281
+msgid "icon chevron circle up"
+msgstr ""
+
+#: admin/click_top_options.php:282
+msgid "icon chevron up"
+msgstr ""
+
+#: admin/click_top_options.php:284
+msgid "icon hand pointer"
+msgstr ""
+
+#: admin/click_top_options.php:283
+msgid "icon hand up"
+msgstr ""
+
+#: admin/click_top_options.php:285
+msgid "icon long arrow up"
+msgstr ""
+
+#: admin/click_top_options.php:286
+msgid "icon toggle up"
+msgstr ""
+
+#: admin/click_top_options.php:162
+msgid ""
+"If you select right side set right side margin and if you select left side "
+"set left side margin by %.Set 0 to 5 for better view.default is 5"
+msgstr ""
+
+#: admin/click_top_options.php:155
+msgid "Left side"
+msgstr ""
+
+#: admin/click_top_options.php:95
+msgid "linear"
+msgstr ""
+
+#: admin/click_top_options.php:137
+msgid "none"
+msgstr ""
+
+#. Author of the plugin
+msgid "Noor alam"
+msgstr ""
+
+#: admin/click_top_options.php:203
+msgid "pop"
+msgstr ""
+
+#: admin/click_top_options.php:199
+msgid "Pulse"
+msgstr ""
+
+#: admin/click_top_options.php:200
+msgid "Pulse grow"
+msgstr ""
+
+#: admin/click_top_options.php:201
+msgid "Pulse shrink"
+msgstr ""
+
+#: admin/click_top_options.php:202
+msgid "Push"
+msgstr ""
+
+#: admin/click_top_options.php:156
+msgid "Right side"
+msgstr ""
+
+#: admin/click_top_options.php:187
+msgid "Round"
+msgstr ""
+
+#: admin/click_top_options.php:150
+msgid "scroll position"
+msgstr ""
+
+#: admin/click_top_options.php:73
+msgid "Scroll show distance"
+msgstr ""
+
+#: admin/click_top_options.php:55
+msgid "Scroll style Settings"
+msgstr ""
+
+#: admin/click_top_options.php:91
+msgid "Scroll to top easing style set as you choice"
+msgstr ""
+
+#: admin/click_top_options.php:410 admin/nt-class.php:148
+msgid "see here"
+msgstr ""
+
+#: admin/click_top_options.php:130
+msgid "Select animation"
+msgstr ""
+
+#: admin/click_top_options.php:131
+msgid "Select animation in this box."
+msgstr ""
+
+#: admin/click_top_options.php:181
+msgid "Select scroll button style"
+msgstr ""
+
+#: admin/click_top_options.php:182
+msgid "Select scroll button style square or round."
+msgstr ""
+
+#: admin/click_top_options.php:258
+msgid "Select scroll button type"
+msgstr ""
+
+#: admin/click_top_options.php:259
+msgid "Select scroll button type text or icon."
+msgstr ""
+
+#: admin/click_top_options.php:193
+msgid "Select scroll hover style on your choice."
+msgstr ""
+
+#: admin/click_top_options.php:192
+msgid "Select scroll hover style."
+msgstr ""
+
+#: admin/click_top_options.php:269
+msgid "Select scroll icon"
+msgstr ""
+
+#: admin/click_top_options.php:151
+msgid "Select scroll position left or right."
+msgstr ""
+
+#: admin/click_top_options.php:90
+msgid "Select your easing type"
+msgstr ""
+
+#: admin/click_top_options.php:142
+msgid "Set Animation speed"
+msgstr ""
+
+#: admin/click_top_options.php:143
+msgid "Set Animation speed by (ms)"
+msgstr ""
+
+#: admin/click_top_options.php:299
+msgid "Set background color"
+msgstr ""
+
+#: admin/click_top_options.php:308
+msgid "Set color text or icon, whatever you select."
+msgstr ""
+
+#: admin/click_top_options.php:307
+msgid "Set icon or text color"
+msgstr ""
+
+#: admin/click_top_options.php:323
+msgid "Set icon or text hover color"
+msgstr ""
+
+#: admin/click_top_options.php:300
+msgid "Set scroll background color."
+msgstr ""
+
+#: admin/click_top_options.php:315
+msgid "Set scroll background hover color"
+msgstr ""
+
+#: admin/click_top_options.php:316
+msgid "Set scroll background hover color."
+msgstr ""
+
+#: admin/click_top_options.php:170
+msgid "Set scroll bottom position by %.Set 0 to 5 for better view.default is 5"
+msgstr ""
+
+#: admin/click_top_options.php:347
+msgid "Set scroll font size"
+msgstr ""
+
+#: admin/click_top_options.php:348
+msgid "Set scroll font size by px."
+msgstr ""
+
+#: admin/click_top_options.php:331
+msgid "Set scroll opacity"
+msgstr ""
+
+#: admin/click_top_options.php:332
+msgid "Set scroll opacity by 1 to 99.default is 99"
+msgstr ""
+
+#: admin/click_top_options.php:339
+msgid "Set scroll padding"
+msgstr ""
+
+#: admin/click_top_options.php:340
+msgid "Set scroll padding by px."
+msgstr ""
+
+#: admin/click_top_options.php:324
+msgid "Set scroll selected hover color."
+msgstr ""
+
+#: admin/click_top_options.php:82
+msgid "Set scroll speed"
+msgstr ""
+
+#: admin/click_top_options.php:161
+msgid "Set selected position margin"
+msgstr ""
+
+#: admin/click_top_options.php:245
+msgid "Shadow"
+msgstr ""
+
+#: admin/click_top_options.php:249
+msgid "Shadow-radial"
+msgstr ""
+
+#: admin/click_top_options.php:197
+msgid "Shrink"
+msgstr ""
+
+#: admin/click_top_options.php:136
+msgid "slide"
+msgstr ""
+
+#: admin/click_top_options.php:83
+msgid "Speed back to top (ms)"
+msgstr ""
+
+#: admin/click_top_options.php:186
+msgid "Square"
+msgstr ""
+
+#: admin/click_top_options.php:264
+msgid "Text"
+msgstr ""
+
+#: admin/click_top_options.php:291
+msgid "Type scroll text"
+msgstr ""
+
+#: admin/nt-class.php:148
+msgid "View WordPress Theme"
+msgstr ""
+
+#: admin/click_top_options.php:410
+msgid "🎁 Explore Offer Now 🚀"
+msgstr ""
