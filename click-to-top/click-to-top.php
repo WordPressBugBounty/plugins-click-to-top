@@ -8,7 +8,7 @@
  * Plugin Name:       Click to top
  * Plugin URI:        http://wpthemespace.com
  * Description:       A Click to top tool kit that helps your visitor go top smoothly.
- * Version:           1.2.24
+ * Version:           1.2.25
  * Author:            Noor alam
  * Author URI:        http://wpthemespace.com
  * License:           GPL-2.0+

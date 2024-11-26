@@ -3,8 +3,8 @@ Contributors: nalam
 Donate link: https://wpthemespace.com/donation/
 Tags: scroll to top, arrow icon, back to top, scroll up, page scrolling
 Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 1.2.24
+Tested up to: 6.7
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -109,6 +109,9 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 == Changelog ==
 
+= 1.2.25 =
+    * Fixed  Function _load_textdomain_just_in_time was called incorrectly Error
+ 	* update package
 = 1.2.11 =
     Tested with WordPress 5.7
 = 1.2.8 =
