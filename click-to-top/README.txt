@@ -3,7 +3,7 @@ Contributors: nalam
 Donate link: https://wpthemespace.com/donation/
 Tags: scroll to top, arrow icon, back to top, scroll up, page scrolling
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

@@ -130,9 +130,9 @@ if (!class_exists('click_top_options')) :
                         'label'   => esc_html__('Select animation', 'click-to-top'),
                         'desc'    => esc_html__('Select animation in this box.', 'click-to-top'),
                         'type'    => 'radio',
-                        'default' => 'slide',
+                        'default' => 'fade',
                         'options' => array(
-                            'Fade' => esc_html__('Fade', 'click-to-top'),
+                            'fade' => esc_html__('Fade', 'click-to-top'),
                             'slide' => esc_html__('slide', 'click-to-top'),
                             'none' => esc_html__('none', 'click-to-top'),
                         )
@@ -269,7 +269,7 @@ if (!class_exists('click_top_options')) :
                         'label'   => esc_html__('Select scroll icon', 'click-to-top'),
                         'desc'    => esc_html__('First select button type icon then choice icon.', 'click-to-top'),
                         'type'    => 'select',
-                        'default' => 'angle-double-up',
+                        'default' => 'angle-up',
                         'options' => array(
                             'angle-double-up' => esc_html__('icon angle-double-up', 'click-to-top'),
                             'angle-up' => esc_html__('icon angle up', 'click-to-top'),

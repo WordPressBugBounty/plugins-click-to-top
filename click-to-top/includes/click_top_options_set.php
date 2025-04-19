@@ -163,7 +163,7 @@ if (!function_exists('click_to_top_all_js_options')) :
     $animation_Speed = (isset($options['animation_Speed'])) ? $options['animation_Speed'] : 200;
     $hover_affect = (isset($sstyle['hover_affect'])) ? $sstyle['hover_affect'] : 'bubble-top';
     $btn_type = (isset($sstyle['btn_type'])) ? $sstyle['btn_type'] : 'icon';
-    $select_icon = (isset($sstyle['select_icon'])) ? $sstyle['select_icon'] : 'angle-double-up';
+    $select_icon = (isset($sstyle['select_icon'])) ? $sstyle['select_icon'] : 'angle-up';
     $btn_text = (isset($sstyle['btn_text'])) ? $sstyle['btn_text'] : esc_html__('Click to top', 'click-to-top');
   ?>
 
