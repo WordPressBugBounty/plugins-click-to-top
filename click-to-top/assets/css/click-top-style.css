@@ -10,11 +10,31 @@ a#clickTop {
   text-align: center;
   vertical-align: unset
 }
+
+/* SVG Icon styles */
+a#clickTop .ctt-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+a#clickTop svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+/* Legacy Font Awesome support - can be removed */
 a#clickTop i{
   margin-top: 2px;
   text-align: center;
   vertical-align: middle;
 }
+
 a#clickTop{
   text-decoration:none;
 }

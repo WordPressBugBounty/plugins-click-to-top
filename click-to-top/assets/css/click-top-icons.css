@@ -1,0 +1,23 @@
+/**
+ * Click to Top - SVG Icons
+ * Replaces Font Awesome with lightweight inline SVG icons
+ * 
+ * @since 1.2.27
+ */
+
+/* Base icon styles */
+.ctt-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 0;
+}
+
+/* Icon size adjustments */
+a#clickTop .ctt-icon {
+    width: 1.2em;
+    height: 1.2em;
+}

@@ -2,8 +2,8 @@
 Contributors: nalam
 Donate link: https://wpthemespace.com/donation/
 Tags: scroll to top, arrow icon, back to top, scroll up, page scrolling
-Requires at least: 5.0
-Tested up to: 6.8
+Requires at least: 6.0
+Tested up to: 6.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -109,9 +109,28 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 == Changelog ==
 
+= 1.3.0 =
+* NEW: Responsive button sizes - Set custom sizes for desktop, tablet, and mobile separately
+* NEW: Tablet visibility control - Show or hide button on tablet devices (768px - 1024px)
+* NEW: Touch-friendly tap area - Larger invisible tap area for easier touch interaction
+* NEW: Scroll progress indicator - Circular progress ring that shows scroll position
+* NEW: Recommended Plugins tab - Discover useful plugins with one-click install
+* IMPROVED: SVG icons now replace Font Awesome for faster loading
+* IMPROVED: Progress indicator now respects responsive button sizes
+* IMPROVED: Better mobile and tablet experience
+* IMPROVED: Modern admin UI with gradient header
+* Tested with WordPress 6.8
+
+= 1.2.29 =
+* Added scroll progress indicator feature
+* Added mobile visibility control option
+* Replaced Font Awesome with lightweight inline SVG icons
+* Improved performance with inline CSS and JS
+* Code optimization and cleanup
+
 = 1.2.25 =
-    * Fixed  Function _load_textdomain_just_in_time was called incorrectly Error
- 	* update package
+* Fixed  Function _load_textdomain_just_in_time was called incorrectly Error
+* update package
 = 1.2.11 =
     Tested with WordPress 5.7
 = 1.2.8 =

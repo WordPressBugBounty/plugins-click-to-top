@@ -558,6 +558,12 @@ if (!class_exists('WeDevs_Settings_API')) :
             <div class="metabox-holder">
                 <?php foreach ($this->settings_sections as $form) { ?>
                     <div id="<?php echo esc_attr($form['id']); ?>" class="group" style="display: none;">
+                        <?php
+                        // Check if this section has a callback instead of form fields
+                        if ( isset( $form['callback'] ) && is_callable( $form['callback'] ) ) {
+                            call_user_func( $form['callback'] );
+                        } else {
+                        ?>
                         <form method="post" action="options.php">
                             <?php
                             do_action('wsa_form_top_' . $form['id'], $form);
@@ -571,6 +577,7 @@ if (!class_exists('WeDevs_Settings_API')) :
                                 </div>
                             <?php endif; ?>
                         </form>
+                        <?php } ?>
                     </div>
                 <?php } ?>
             </div>
