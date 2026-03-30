@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Appsero\\' => array($vendorDir . '/appsero/client/src'),
+    'WPSpace\\Pulse\\' => array($vendorDir . '/wpspace/pulse-sdk/src'),
 );

@@ -7,16 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInit2c0bf4f27b0408ad3df1be8617df5dab
 {
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        'W' => 
         array (
-            'Appsero\\' => 8,
+            'WPSpace\\Pulse\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Appsero\\' => 
+        'WPSpace\\Pulse\\' => 
         array (
-            0 => __DIR__ . '/..' . '/appsero/client/src',
+            0 => __DIR__ . '/..' . '/wpspace/pulse-sdk/src',
         ),
     );
 

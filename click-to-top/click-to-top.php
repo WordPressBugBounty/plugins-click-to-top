@@ -8,7 +8,7 @@
  * Plugin Name:       Click to top
  * Plugin URI:        http://wpthemespace.com
  * Description:       A Click to top tool kit that helps your visitor go top smoothly. Now with SVG icons, responsive controls, scroll progress indicator, and mobile/tablet visibility options!
- * Version:           1.3.0
+ * Version:           1.3.1
  * Author:            Noor alam
  * Author URI:        http://wpthemespace.com
  * License:           GPL-2.0+
@@ -80,24 +80,9 @@ function click_top_admin_script()
 add_action('admin_enqueue_scripts', 'click_top_admin_script');
 
 /**
- * Initialize the plugin tracker
- *
- * @return void
+ * Initialize PluginPulse tracking (config lives inside the SDK).
  */
-function appsero_init_tracker_click_to_top()
-{
-
-	if (!class_exists('Appsero\Client')) {
-		require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
-	}
-
-	$client = new Appsero\Client('cdf405c8-d3c4-432c-9124-1eb5b775bb94', 'Click to top', __FILE__);
-
-	// Active insights
-	$client->insights()->init();
-}
-
-appsero_init_tracker_click_to_top();
+require_once __DIR__ . '/vendor/wpspace/pulse-sdk/autostart.php';
 
 /**
  * Show admin notice after plugin update with new features

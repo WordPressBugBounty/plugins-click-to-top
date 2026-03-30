@@ -1,5 +1,11 @@
 {
     "require": {
-        "appsero/client": "^2.0.5"
-    }
+        "wpspace/pulse-sdk": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../pulse-sdk"
+        }
+    ]
 }

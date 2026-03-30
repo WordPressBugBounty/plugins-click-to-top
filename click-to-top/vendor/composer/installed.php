@@ -7,7 +7,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
         '__root__' => array(
@@ -19,12 +19,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'appsero/client' => array(
-            'pretty_version' => 'v2.0.5',
-            'version' => '2.0.5.0',
-            'reference' => 'b7766ee150cc8e28125a818a11e770feb9899a71',
+        'wpspace/pulse-sdk' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c2098c89e4ade88860879c1f33691ce632ac5cd5',
             'type' => 'library',
-            'install_path' => __DIR__ . '/../appsero/client',
+            'install_path' => __DIR__ . '/../wpspace/pulse-sdk',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

@@ -98,16 +98,20 @@ No, Click to Top is designed to be lightweight and optimized for performance to 
 
 
 ## Privacy Policy
-Click to top uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+Click to Top uses an anonymous telemetry system to collect basic usage data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
 
-Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
+The telemetry system **does not gather any data by default.** It only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
 
-Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
+The telemetry integration **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
 
-Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
+The data collected may include: WordPress version, PHP version, plugin version, site URL, admin email, server software, locale, and active plugin/theme information. No personal content or sensitive data is ever collected.
 
 
 == Changelog ==
+
+= 1.3.1 =
+* Updated default bg color and box shadow 
+
 
 = 1.3.0 =
 * NEW: Responsive button sizes - Set custom sizes for desktop, tablet, and mobile separately

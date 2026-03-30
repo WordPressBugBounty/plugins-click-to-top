@@ -51,7 +51,7 @@ function click_to_top_get_dynamic_css() {
     $scroll_padding = isset($sstyle['scroll_padding']) ? absint($sstyle['scroll_padding']) : 5;
     $btn_style = isset($sstyle['btn_style']) ? $sstyle['btn_style'] : 'square';
     $icon_color = isset($sstyle['icon_color']) ? sanitize_hex_color($sstyle['icon_color']) : '#000000';
-    $bg_color = isset($sstyle['bg_color']) ? sanitize_hex_color($sstyle['bg_color']) : '#cccccc';
+    $bg_color = isset($sstyle['bg_color']) ? sanitize_hex_color($sstyle['bg_color']) : '#f2f2f2';
     $bg_hover_color = isset($sstyle['bg_hover_color']) ? sanitize_hex_color($sstyle['bg_hover_color']) : '#555555';
     $hover_color = isset($sstyle['hover_color']) ? sanitize_hex_color($sstyle['hover_color']) : '#ffffff';
     $scroll_opacity = isset($sstyle['scroll_opacity']) ? absint($sstyle['scroll_opacity']) : 99;
@@ -319,7 +319,7 @@ function click_to_top_get_dynamic_css() {
             cursor: pointer;
             display: block;
             border-radius: 50%;
-            box-shadow: inset 0 0 0 2px rgba(0,0,0,0.1);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             z-index: 2147483646;
             opacity: 0;
             visibility: hidden;

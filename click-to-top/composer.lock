@@ -4,67 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81edaf4f356d59501fcfe45692c24480",
+    "content-hash": "8bc9f88141cedd277e585f17a61d8bb9",
     "packages": [
         {
-            "name": "appsero/client",
-            "version": "v2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Appsero/client.git",
-                "reference": "b7766ee150cc8e28125a818a11e770feb9899a71"
-            },
+            "name": "wpspace/pulse-sdk",
+            "version": "dev-main",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Appsero/client/zipball/b7766ee150cc8e28125a818a11e770feb9899a71",
-                "reference": "b7766ee150cc8e28125a818a11e770feb9899a71",
-                "shasum": ""
+                "type": "path",
+                "url": "../pulse-sdk",
+                "reference": "c2098c89e4ade88860879c1f33691ce632ac5cd5"
             },
             "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
-                "phpcompatibility/phpcompatibility-wp": "dev-master",
-                "phpunit/phpunit": "^8.5.31",
-                "squizlabs/php_codesniffer": "^3.7",
-                "tareq1988/wp-php-cs-fixer": "dev-master",
-                "wp-coding-standards/wpcs": "dev-develop"
+                "php": ">=7.4"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Appsero\\": "src/"
+                    "WPSpace\\Pulse\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Tareq Hasan",
-                    "email": "tareq@appsero.com"
-                }
-            ],
-            "description": "Appsero Client",
-            "keywords": [
-                "analytics",
-                "plugin",
-                "theme",
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/Appsero/client/issues",
-                "source": "https://github.com/Appsero/client/tree/v2.0.5"
-            },
-            "time": "2025-11-24T10:14:59+00:00"
+            "description": "Self-hosted plugin analytics SDK for PluginPulse – tracks activations, deactivations, and usage data.",
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "wpspace/pulse-sdk": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
