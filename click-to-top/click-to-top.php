@@ -8,7 +8,7 @@
  * Plugin Name:       Click to top
  * Plugin URI:        http://wpthemespace.com
  * Description:       A Click to top tool kit that helps your visitor go top smoothly. Now with SVG icons, responsive controls, scroll progress indicator, and mobile/tablet visibility options!
- * Version:           1.3.1
+ * Version:           1.3.2
  * Author:            Noor alam
  * Author URI:        http://wpthemespace.com
  * License:           GPL-2.0+
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin version
-define('CLICK_TO_TOP_VERSION', '1.3.0');
+define('CLICK_TO_TOP_VERSION', '1.3.2');
 
 /**
  * The core plugin class that is used to define internationalization,
