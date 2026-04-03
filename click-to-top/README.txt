@@ -109,6 +109,9 @@ The data collected may include: WordPress version, PHP version, plugin version, 
 
 == Changelog ==
 
+= 1.3.3 =
+* PHP bug Fixed
+
 = 1.3.2 =
 * Updated default bg color and box shadow 
 

@@ -195,7 +195,12 @@ class Insights {
 		$this->clear_schedule_event();
 		$this->schedule_event();
 
-		$this->send_tracking_data( true );
+		// Send an activate event so the server knows this plugin is active.
+		$data          = $this->get_tracking_data();
+		$data['event'] = 'activate';
+		$this->client->send_request( $data, 'track' );
+
+		update_option( $this->client->slug . '_pulse_last_send', time() );
 	}
 
 	/**
