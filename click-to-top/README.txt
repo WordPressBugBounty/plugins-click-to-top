@@ -109,6 +109,10 @@ The data collected may include: WordPress version, PHP version, plugin version, 
 
 == Changelog ==
 
+= 1.3.4 =
+* Added settings page link in plugin page
+* Removed extra notice
+
 = 1.3.3 =
 * PHP bug Fixed
 

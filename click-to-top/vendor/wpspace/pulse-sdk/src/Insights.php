@@ -78,6 +78,10 @@ class Insights {
 			array( $this, 'deactivation_reason_submission' )
 		);
 
+		// One-time sync for existing installs that predate the SDK.
+		// Fires once, then sets a flag so it never runs again.
+		add_action( 'admin_init', array( $this, 'maybe_sync_existing' ) );
+
 		return $this;
 	}
 
@@ -91,6 +95,37 @@ class Insights {
 		$this->extra_data = array_merge( $this->extra_data, $data );
 
 		return $this;
+	}
+
+	/**
+	 * Sync existing installs that predate the SDK.
+	 *
+	 * Runs once per site. Sends basic data (or full data if already opted in)
+	 * so the site appears in the PluginPulse dashboard.
+	 *
+	 * @return void
+	 */
+	public function maybe_sync_existing() {
+		$flag = $this->client->slug . '_pulse_synced';
+
+		if ( get_option( $flag ) ) {
+			return;
+		}
+
+		// Mark as synced first to avoid re-runs on failure.
+		update_option( $flag, '1' );
+
+		$allowed = get_option( $this->client->slug . '_pulse_tracking', '' );
+
+		if ( 'yes' === $allowed ) {
+			$data          = $this->get_tracking_data();
+			$data['event'] = 'activate';
+		} else {
+			$data          = $this->get_basic_tracking_data();
+			$data['event'] = 'activate';
+		}
+
+		$this->client->send_request( $data, 'track' );
 	}
 
 	// ------------------------------------------------------------------
@@ -204,7 +239,7 @@ class Insights {
 	}
 
 	/**
-	 * Opt out: disable tracking, unschedule cron.
+	 * Opt out: disable tracking, unschedule cron, send basic data.
 	 *
 	 * @return void
 	 */
@@ -212,6 +247,11 @@ class Insights {
 		update_option( $this->client->slug . '_pulse_tracking', 'no' );
 
 		$this->clear_schedule_event();
+
+		// Still send basic data so site appears in the dashboard.
+		$data          = $this->get_basic_tracking_data();
+		$data['event'] = 'activate';
+		$this->client->send_request( $data, 'track' );
 	}
 
 	// ------------------------------------------------------------------
@@ -281,6 +321,33 @@ class Insights {
 		return apply_filters( 'pulse_tracking_data', $data, $this->client );
 	}
 
+	/**
+	 * Collect basic (non-diagnostic) tracking data.
+	 *
+	 * Sent when the user has NOT opted in. Only includes identifying
+	 * information: name, email, site URL, IP (for country), and
+	 * plugin version. No server/WP/plugin diagnostic info.
+	 *
+	 * @return array
+	 */
+	public function get_basic_tracking_data() {
+		$current_user = wp_get_current_user();
+
+		return array(
+			'hash'             => $this->client->hash,
+			'slug'             => $this->client->slug,
+			'url'              => esc_url( home_url() ),
+			'site'             => $this->get_site_name(),
+			'admin_email'      => get_option( 'admin_email' ),
+			'first_name'       => $current_user->first_name ?? '',
+			'last_name'        => $current_user->last_name ?? '',
+			'version'          => $this->get_plugin_version(),
+			'is_local'         => $this->client->is_local_server(),
+			'ip_address'       => $this->get_user_ip_address(),
+			'tracking_skipped' => true,
+		);
+	}
+
 	// ------------------------------------------------------------------
 	// Plugin Lifecycle
 	// ------------------------------------------------------------------
@@ -288,22 +355,28 @@ class Insights {
 	/**
 	 * Runs on plugin activation.
 	 *
+	 * Always sends basic data (name, email, site URL) so the site
+	 * appears in the dashboard immediately. Full diagnostic data
+	 * is only sent if the user has opted in.
+	 *
 	 * @return void
 	 */
 	public function activate_plugin() {
 		$allowed = get_option( $this->client->slug . '_pulse_tracking', 'no' );
 
-		if ( 'yes' !== $allowed ) {
-			return;
+		if ( 'yes' === $allowed ) {
+			$this->schedule_event();
+			delete_option( $this->client->slug . '_pulse_last_send' );
+
+			$data          = $this->get_tracking_data();
+			$data['event'] = 'activate';
+			$this->client->send_request( $data, 'track' );
+		} else {
+			// Send basic data even if not opted in so the site appears in the list.
+			$data          = $this->get_basic_tracking_data();
+			$data['event'] = 'activate';
+			$this->client->send_request( $data, 'track' );
 		}
-
-		$this->schedule_event();
-
-		delete_option( $this->client->slug . '_pulse_last_send' );
-
-		$data          = $this->get_tracking_data();
-		$data['event'] = 'activate';
-		$this->client->send_request( $data, 'track' );
 	}
 
 	/**
