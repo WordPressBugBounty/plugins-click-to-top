@@ -452,6 +452,15 @@ if (!class_exists('click_top_options')) :
                         'default'           => 16,
                         'sanitize_callback' => 'intval'
                     ),
+                    array(
+                        'name'              => 'custom_css',
+                        'label'             => esc_html__('Custom CSS', 'click-to-top'),
+                        'desc'              => esc_html__('Add custom CSS to style the scroll-to-top button. Do not include &lt;style&gt; tags.', 'click-to-top'),
+                        'type'              => 'textarea',
+                        'sanitize_callback' => 'wp_strip_all_tags',
+                        'placeholder'       => esc_html__('/* Your custom CSS here */', 'click-to-top'),
+                        'size'              => 'large',
+                    ),
 
                 )
             );
@@ -1231,43 +1240,4 @@ if (!class_exists('click_top_options')) :
     }
 endif;
 require plugin_dir_path(__FILE__) . '/src/class.settings-api.php';
-
 new click_top_options();
-
-
-
-function clickhide_admin_notice()
-{
-
-    $hide_date = get_option('click_to_top_shop_info');
-    if (!empty($hide_date)) {
-        $clickhide = round((time() - strtotime($hide_date)) / 24 / 60 / 60);
-        if ($clickhide < 25) {
-            return;
-        }
-    }
-
-    $class = 'notice notice-success is-dismissible';
-    $url1 = esc_url('https://wpthemespace.com/product/shop-toolkit-pro/?add-to-cart=11720');
-    $message = __('<strong><span style="color:red;">Hi Buddy!! 🔥 Shop Toolkit Pro Theme:</span>  <span style="color:green"> Best online shop theme Now available with 20% early discount! </span> – Use coupon ( mg20off ) & Grab Your Exclusive Offers! </strong>', 'click-to-top');
-
-    printf(
-        '<div class="%1$s" style="padding:10px 15px 20px;"><p style="font-size:16px">%2$s <a href="%3$s" target="_blank">%4$s</a>.</p><div style="display:flex;align-items:center;margin-top:25px"><a target="_blank" class="button button-primary" href="%3$s" style="margin-right:10px;padding:10px 20px;font-size:16px">%5$s</a><a href="#" style="padding:0;background:transparent;border:none" class="nothanks link notic-click-dissmiss">%6$s</a></div></div>',
-        esc_attr($class),
-        wp_kses_post($message),
-        esc_url($url1),
-        esc_html__('see here', 'click-to-top'),
-        esc_html__('🎁 Explore Offer Now 🚀', 'click-to-top'),
-        esc_html__('Hide Me', 'click-to-top')
-    );
-}
-add_action('admin_notices', 'clickhide_admin_notice');
-
-
-function clickhide_new_optins_texts_init()
-{
-    if (isset($_GET['cdismissed']) && $_GET['cdismissed'] == 1) {
-        update_option('click_to_top_shop_info', current_time('mysql'));
-    }
-}
-add_action('init', 'clickhide_new_optins_texts_init');

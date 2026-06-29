@@ -3,22 +3,24 @@ Contributors: nalam
 Donate link: https://wpthemespace.com/donation/
 Tags: scroll to top, arrow icon, back to top, scroll up, page scrolling
 Requires at least: 6.0
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-A wordpress plugin to create a customisable Click To Top feature.
+Best WordPress scroll to top plugin. Fully customizable back to top button with smooth scrolling, keyboard shortcut, and advanced styling.
 
 == Description ==
 
-<h4>Click to top is nice choice for go top in website.</h4>
-Click to Top is a WordPress plugin that allows users to easily and quickly navigate to the top of a web page with just one click. This plugin adds a small button on the bottom-right corner of the website that will take users back to the top of the page when clicked. The button is customizable, and users can choose from different icon styles, sizes, colors, and animations to match their website's design.
+<h4>The ultimate scroll to top plugin for WordPress.</h4>
+Click to Top is the most advanced <strong>WordPress scroll to top plugin</strong>, designed to improve user experience and navigation on long-content websites. It adds a sleek, customizable <strong>back to top button</strong> to the bottom-right corner of your site, letting visitors instantly return to the top of any page with a single click.
 
-The Click to Top plugin is incredibly user-friendly and can be easily installed and activated without any technical expertise. It is compatible with most WordPress themes and is optimized for performance to ensure that it doesn't slow down your website's loading time.
+Unlike basic scroll up plugins, Click to Top offers deep customization — choose from 13 scroll icons, 55 hover effects, all 32 jQuery UI easing animations, unlimited colors, and two button styles (square or round). The plugin is fully responsive, touch-friendly, and optimized for performance so it never slows down your site.
 
-This plugin is particularly useful for websites that have long pages or articles, as it provides an easy way for users to navigate back to the top without having to scroll all the way up manually. It improves user experience, reduces bounce rates, and can even contribute to better search engine rankings.
+Recent updates introduced <strong>custom CSS field</strong> for advanced styling, <strong>smooth scroll anchor links</strong> for same-page navigation, and a <strong>keyboard shortcut (Ctrl + Arrow Up)</strong> for power users. Every feature is designed to reduce bounce rate and keep visitors engaged longer on your content.
+
+Compatible with all major WordPress themes, translation-ready, and backed by an easy-to-use settings panel. Whether you run a blog, magazine, e-commerce store, or corporate site, Click to Top delivers a polished <strong>scroll to top button</strong> experience that users will love.
 <h4>Awesome Plugin’s Features</h4>
 <ul>
 								<li><strong>13 scroll icons.</strong></li>
@@ -31,6 +33,9 @@ This plugin is particularly useful for websites that have long pages or articles
 								<li><strong>Animation support.</strong></li>
 								<li><strong>Two different style square and round.</strong></li>
 								<li><strong>Totally responsive and touch friendly.</strong></li>
+								<li><strong>Custom CSS field for advanced styling.</strong></li>
+								<li><strong>Smooth scroll anchor links (same-page navigation).</strong></li>
+								<li><strong>Keyboard shortcut (Ctrl + Arrow Up) to scroll to top.</strong></li>
 							</ul>
 
 
@@ -108,6 +113,12 @@ The data collected may include: WordPress version, PHP version, plugin version, 
 
 
 == Changelog ==
+
+= 1.3.5 =
+* NEW: Custom CSS field in Style Settings tab
+* NEW: Smooth scroll anchor links support
+* NEW: Keyboard shortcut (Ctrl + Arrow Up) to scroll to top
+* Tested with WordPress 7.0
 
 = 1.3.4 =
 * Added settings page link in plugin page
