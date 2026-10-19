@@ -37,11 +37,13 @@ if (!class_exists('WeDevs_Settings_API')) :
          */
         function admin_enqueue_scripts()
         {
-            wp_enqueue_style('wp-color-picker');
+            if (isset($_GET['page']) && 'click-to-top.php' === $_GET['page']) {
+                wp_enqueue_style('wp-color-picker');
 
-            wp_enqueue_media();
-            wp_enqueue_script('wp-color-picker');
-            wp_enqueue_script('jquery');
+                wp_enqueue_media();
+                wp_enqueue_script('wp-color-picker');
+                wp_enqueue_script('jquery');
+            }
         }
 
         /**

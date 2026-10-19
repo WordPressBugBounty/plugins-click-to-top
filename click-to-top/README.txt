@@ -3,7 +3,7 @@ Contributors: nalam
 Donate link: https://wpthemespace.com/donation/
 Tags: scroll to top, arrow icon, back to top, scroll up, page scrolling
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -53,7 +53,7 @@ Compatible with all major WordPress themes, translation-ready, and backed by an 
 
 e.g.
 
-<h4>First things first, thank you for choosing our Be share lite plugin!</h4>
+<h4>First things first, thank you for choosing our Click to top plugin!</h4>
 <h4>You can install the plugin one of two ways:</h4>
 <h4>Install using FTP</h4>
 <ul>
@@ -84,11 +84,11 @@ Click to Top is a WordPress plugin that adds a small button to the bottom-right 
 
 = Is Click to Top compatible with all WordPress themes? =
 
-lick to Top is designed to be compatible with most WordPress themes
+Click to Top is designed to be compatible with most WordPress themes.
 
 = Can I customize the appearance of the Click to Top button? =
 
-Yes, Click to Top allows you to customize the appearance of the button to match your website's design. The plugin offers a range of customization options, such as changing the button size, color, shape, and animation. You can also choose from various icon styles, including FontAwesome and Dashicons, or upload your own custom icon. Additionally, Click to Top supports the use of custom CSS for further styling options. By default, the plugin adds a small arrow icon to the button, but you can easily change this to a different icon or text label if you prefer. These customization options make it easy to create a Click to Top button that is both functional and visually appealing for your website's users.
+Yes, Click to Top allows you to customize the appearance of the button to match your website's design. The plugin offers a range of customization options, such as changing the button size, color, shape, and animation. You can also choose from 13 lightweight SVG icon styles or display a custom text label. Additionally, Click to Top supports the use of custom CSS for further styling options. By default, the plugin adds a small arrow icon to the button, but you can easily change this to a different icon or text label if you prefer. These customization options make it easy to create a Click to Top button that is both functional and visually appealing for your website's users.
 
 = Will Click to Top slow down my website's loading time? =
 
@@ -113,6 +113,20 @@ The data collected may include: WordPress version, PHP version, plugin version, 
 
 
 == Changelog ==
+
+= 1.3.6 =
+* Fix: Custom CSS is now properly applied and rendered on the frontend
+* Fix: Fully implemented keyboard shortcut (Ctrl/Cmd + Arrow Up) with settings toggle
+* Fix: Fully implemented smooth scrolling for on-page anchor links with settings toggle
+* Fix: Textdomain loading path corrected for internationalization
+* Fix: Restrict admin scripts and styles only to plugin settings page
+* Fix: Removed duplicate animation key in settings
+* Accessibility: Added role="button", tabindex, and aria-labels for screen readers and keyboard users
+* Accessibility: Added Enter and Space key activation for scroll buttons
+* Accessibility: Added prefers-reduced-motion CSS support
+* Improved: Dynamic settings dependencies in admin panel
+* Improved: Documentation cleanup and typo fixes
+* Tested with WordPress 7.1
 
 = 1.3.5 =
 * NEW: Custom CSS field in Style Settings tab

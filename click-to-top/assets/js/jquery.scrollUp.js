@@ -31,14 +31,16 @@
         } else {
             $self = $('<a/>', {
                 id: o.scrollName,
-                href: '#top'
+                href: '#top',
+                role: 'button',
+                tabindex: '0'
             });
         }
 
-        // Set scrollTitle if there is one
-        if (o.scrollTitle) {
-            $self.attr('title', o.scrollTitle);
-        }
+        // Set scrollTitle and aria-label if there is one
+        var titleText = o.scrollTitle || 'Scroll to top';
+        $self.attr('title', titleText);
+        $self.attr('aria-label', titleText);
 
         $self.appendTo('body');
 
@@ -123,9 +125,20 @@
         $self.click(function (e) {
             e.preventDefault();
 
-            $('html, body').animate({
+            $('html, body').stop().animate({
                 scrollTop: scrollTarget
             }, o.scrollSpeed, o.easingType);
+        });
+
+        // Keydown support (Enter or Space)
+        $self.on('keydown', function (e) {
+            if (e.which === 13 || e.which === 32) {
+                e.preventDefault();
+
+                $('html, body').stop().animate({
+                    scrollTop: scrollTarget
+                }, o.scrollSpeed, o.easingType);
+            }
         });
     };
 

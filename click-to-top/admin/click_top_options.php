@@ -274,8 +274,28 @@ if (!class_exists('click_top_options')) :
                         'default'           => 3,
                         'sanitize_callback' => 'intval'
                     ),
-
-
+                    array(
+                        'name'    => 'enable_shortcut',
+                        'label'   => esc_html__('Keyboard Shortcut', 'click-to-top'),
+                        'desc'    => esc_html__('Allow visitors to scroll to top using Ctrl + Arrow Up (or Cmd + Arrow Up on Mac).', 'click-to-top'),
+                        'type'    => 'radio',
+                        'default' => 'enable',
+                        'options' => array(
+                            'enable'  => esc_html__('Enable', 'click-to-top'),
+                            'disable' => esc_html__('Disable', 'click-to-top'),
+                        )
+                    ),
+                    array(
+                        'name'    => 'enable_smooth_scroll',
+                        'label'   => esc_html__('Smooth Scroll for Anchor Links', 'click-to-top'),
+                        'desc'    => esc_html__('Enable smooth scrolling for on-page hash/anchor links (e.g. #section).', 'click-to-top'),
+                        'type'    => 'radio',
+                        'default' => 'enable',
+                        'options' => array(
+                            'enable'  => esc_html__('Enable', 'click-to-top'),
+                            'disable' => esc_html__('Disable', 'click-to-top'),
+                        )
+                    ),
                 ),
                 'click_top_style' => array(
                     array(
@@ -309,7 +329,6 @@ if (!class_exists('click_top_options')) :
                             'bob'  => esc_html__('Bob', 'click-to-top'),
                             'buzz'  => esc_html__('Buzz', 'click-to-top'),
                             'fade'  => esc_html__('Background fade', 'click-to-top'),
-                            'back-pulse'  => esc_html__('Background back-pulse', 'click-to-top'),
                             'back-pulse'  => esc_html__('Background back-pulse', 'click-to-top'),
                             'sweep-to-right'  => esc_html__('Background sweep-to-right', 'click-to-top'),
                             'sweep-to-left'  => esc_html__('Background sweep-to-left', 'click-to-top'),
@@ -528,6 +547,13 @@ if (!class_exists('click_top_options')) :
          */
         public function render_recommended_plugins_content() {
             $plugins = array(
+                array(
+                    'name'        => esc_html__( 'AI Marketing Expert', 'click-to-top' ),
+                    'slug'        => 'ai-marketing-expert',
+                    'description' => esc_html__( 'All-in-one AI marketing suite with AI email marketing, content generator, SEO analyzer, and AI chatbot.', 'click-to-top' ),
+                    'icon'        => 'https://ps.w.org/ai-marketing-expert/assets/icon-128x128.gif',
+                    'url'         => 'https://wordpress.org/plugins/ai-marketing-expert/',
+                ),
                 array(
                     'name'        => esc_html__( 'Easy Share Solution', 'click-to-top' ),
                     'slug'        => 'easy-share-solution',

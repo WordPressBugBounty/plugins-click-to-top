@@ -376,6 +376,12 @@ function click_to_top_get_dynamic_css() {
         ";
     }
     
+    // Add custom CSS
+    $custom_css = isset($sstyle['custom_css']) ? trim($sstyle['custom_css']) : '';
+    if (!empty($custom_css)) {
+        $css .= "\n/* Custom CSS */\n" . wp_strip_all_tags($custom_css) . "\n";
+    }
+    
     return $css;
 }
 
@@ -399,6 +405,10 @@ function click_to_top_get_dynamic_js() {
     // Progress indicator option
     $progress_indicator = isset($options['progress_indicator']) ? $options['progress_indicator'] : 'enable';
     
+    // Shortcut and smooth scroll options
+    $enable_shortcut = isset($options['enable_shortcut']) ? $options['enable_shortcut'] : 'enable';
+    $enable_smooth_scroll = isset($options['enable_smooth_scroll']) ? $options['enable_smooth_scroll'] : 'enable';
+
     // Style options
     $hover_affect = isset($sstyle['hover_affect']) ? sanitize_text_field($sstyle['hover_affect']) : 'bubble-top';
     $btn_type = isset($sstyle['btn_type']) ? $sstyle['btn_type'] : 'icon';
@@ -415,6 +425,48 @@ function click_to_top_get_dynamic_js() {
     // Escape for JS
     $scroll_text = str_replace("'", "\\'", $scroll_text);
     $scroll_text = str_replace(array("\n", "\r"), '', $scroll_text);
+    $scroll_title = esc_attr__('Scroll to top', 'click-to-top');
+
+    // Common extra JS handlers
+    $extra_js = '';
+    if ($enable_shortcut === 'enable') {
+        $extra_js .= "
+                // Keyboard shortcut (Ctrl/Cmd + Arrow Up)
+                $(document).on('keydown', function(e) {
+                    if (e.which === 38 && (e.ctrlKey || e.metaKey)) {
+                        var tag = e.target.tagName ? e.target.tagName.toLowerCase() : '';
+                        if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) {
+                            return;
+                        }
+                        e.preventDefault();
+                        $('html, body').stop().animate({scrollTop: 0}, {$scroll_speed}, '{$easing_type}');
+                    }
+                });";
+    }
+
+    if ($enable_smooth_scroll === 'enable') {
+        $extra_js .= "
+                // Smooth scroll for internal anchor links
+                $(document).on('click', 'a[href*=\"#\"]:not([href=\"#\"]):not([href=\"#0\"])', function(e) {
+                    if (location.pathname.replace(/^\\//,'') === this.pathname.replace(/^\\//,'') && location.hostname === this.hostname) {
+                        var hash = this.hash;
+                        if (!hash) return;
+                        var target;
+                        try {
+                            target = $(hash);
+                        } catch (err) {
+                            return;
+                        }
+                        target = target.length ? target : $('[name=' + hash.slice(1) + ']');
+                        if (target.length) {
+                            e.preventDefault();
+                            $('html, body').stop().animate({
+                                scrollTop: target.offset().top
+                            }, {$scroll_speed}, '{$easing_type}');
+                        }
+                    }
+                });";
+    }
     
     // Check if progress indicator is enabled
     if ($progress_indicator === 'enable') {
@@ -423,7 +475,7 @@ function click_to_top_get_dynamic_js() {
             'use strict';
             $(document).ready(function() {
                 // Create progress indicator HTML
-                var progressHTML = '<div id=\"clickTop-progress-wrap\"><svg class=\"ctt-progress-circle\" width=\"100%\" height=\"100%\" viewBox=\"-1 -1 102 102\"><path class=\"ctt-progress-bar\" d=\"M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98\" style=\"transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;\"></path></svg><span class=\"ctt-progress-icon\">{$scroll_text}</span></div>';
+                var progressHTML = '<div id=\"clickTop-progress-wrap\" role=\"button\" tabindex=\"0\" aria-label=\"{$scroll_title}\"><svg class=\"ctt-progress-circle\" width=\"100%\" height=\"100%\" viewBox=\"-1 -1 102 102\" aria-hidden=\"true\"><path class=\"ctt-progress-bar\" d=\"M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98\" style=\"transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;\"></path></svg><span class=\"ctt-progress-icon\" aria-hidden=\"true\">{$scroll_text}</span></div>';
                 $('body').append(progressHTML);
                 
                 var progressWrap = $('#clickTop-progress-wrap');
@@ -439,7 +491,7 @@ function click_to_top_get_dynamic_js() {
                 $(window).on('scroll', function() {
                     var scroll = $(window).scrollTop();
                     var height = $(document).height() - $(window).height();
-                    var progress = pathLength - (scroll * pathLength / height);
+                    var progress = height > 0 ? (pathLength - (scroll * pathLength / height)) : pathLength;
                     progressPath.css('stroke-dashoffset', progress);
                     
                     // Show/hide based on scroll distance
@@ -453,9 +505,19 @@ function click_to_top_get_dynamic_js() {
                 // Scroll to top on click
                 progressWrap.on('click', function(e) {
                     e.preventDefault();
-                    $('html, body').animate({scrollTop: 0}, {$scroll_speed}, '{$easing_type}');
+                    $('html, body').stop().animate({scrollTop: 0}, {$scroll_speed}, '{$easing_type}');
                     return false;
                 });
+
+                // Scroll to top on Enter / Space key
+                progressWrap.on('keydown', function(e) {
+                    if (e.which === 13 || e.which === 32) {
+                        e.preventDefault();
+                        $('html, body').stop().animate({scrollTop: 0}, {$scroll_speed}, '{$easing_type}');
+                        return false;
+                    }
+                });
+{$extra_js}
             });
         }(jQuery));";
     } else {
@@ -472,10 +534,12 @@ function click_to_top_get_dynamic_js() {
                     animation: '{$animation}',
                     animationSpeed: {$animation_speed},
                     scrollText: '{$scroll_text}',
+                    scrollTitle: '{$scroll_title}',
                     activeOverlay: false,
                     zIndex: 2147483647
                 });
-                \$('a#clickTop').addClass('hvr-{$hover_affect}');
+                $('a#clickTop').attr('role', 'button').attr('aria-label', '{$scroll_title}').addClass('hvr-{$hover_affect}');
+{$extra_js}
             });
         }(jQuery));";
     }

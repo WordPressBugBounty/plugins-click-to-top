@@ -8,7 +8,7 @@
  * Plugin Name:       Click to top
  * Plugin URI:        http://wpthemespace.com
  * Description:       A Click to top tool kit that helps your visitor go top smoothly. Now with SVG icons, responsive controls, scroll progress indicator, and mobile/tablet visibility options!
- * Version:           1.3.5
+ * Version:           1.3.6
  * Author:            Noor alam
  * Author URI:        http://wpthemespace.com
  * License:           GPL-2.0+
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin version
-define('CLICK_TO_TOP_VERSION', '1.3.4');
+define('CLICK_TO_TOP_VERSION', '1.3.6');
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -51,7 +51,7 @@ if (!function_exists('click_to_top_script')) :
 
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('click-to-top-easing', plugins_url('/assets/js/jquery.easing.js', __FILE__), array('jquery'), '1.0', true);
-		wp_enqueue_script('click-to-top-scrollUp', plugins_url('/assets/js/jquery.scrollUp.js', __FILE__), array('jquery', 'click-to-top-easing'), '1.0', true);
+		wp_enqueue_script('click-to-top-scrollUp', plugins_url('/assets/js/jquery.scrollUp.js', __FILE__), array('jquery', 'click-to-top-easing'), CLICK_TO_TOP_VERSION, true);
 	}
 	add_action('wp_enqueue_scripts', 'click_to_top_script');
 endif;
@@ -68,14 +68,17 @@ if (!function_exists('click_to_top_textdomain')) :
 		load_plugin_textdomain(
 			'click-to-top',
 			false,
-			dirname(dirname(plugin_basename(__FILE__))) . '/languages'
+			dirname(plugin_basename(__FILE__)) . '/languages'
 		);
 	}
 	add_action('plugins_loaded', 'click_to_top_textdomain');
 endif;
 
-function click_top_admin_script()
+function click_top_admin_script( $hook )
 {
+	if ( 'settings_page_click-to-top' !== $hook ) {
+		return;
+	}
 	wp_enqueue_script('click-top-admin-js', plugins_url('/assets/js/admin.js', __FILE__), array('jquery'), CLICK_TO_TOP_VERSION, true);
 }
 add_action('admin_enqueue_scripts', 'click_top_admin_script');

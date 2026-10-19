@@ -39,10 +39,17 @@ a#clickTop{
   text-decoration:none;
 }
 
-a#clickTop:focus{
-	outline:none;
+a#clickTop:focus-visible,
+#clickTop-progress-wrap:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
-a#clickTop:active{
-	background:none;
-	color:none;
+
+@media (prefers-reduced-motion: reduce) {
+  #clickTop-progress-wrap,
+  #clickTop-progress-wrap path,
+  a#clickTop {
+    transition: none !important;
+  }
 }
+
